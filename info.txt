@@ -1,0 +1,10 @@
+NO UBUNTU
+    sudo apt-get install libmysqlclient-dev python3-dev
+
+NO MAC
+    brew install mysql-connector-c
+
+NO WINDOWS com MySql Instalado
+    As bibliotecas já devem estar instaladas
+
+

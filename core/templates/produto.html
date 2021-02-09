@@ -1,0 +1,29 @@
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Produto</title>
+    {% bootstrap_css%}
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+    <h1>Produto</h1>
+        {% bootstrap_messages %}
+
+        <form action="{% url 'produto' %}" method="POST" class="form" autocomplete="off" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {% bootstrap_form form %}
+        {% buttons %}
+            <button type="submit" class="btn-primary">Cadastrar</button>
+        {% endbuttons %}
+
+        </form>
+    </div>
+{% bootstrap_javascript jquery='full' %}
+</body>
+</html>
